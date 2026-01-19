@@ -29,4 +29,297 @@
       background:var(--bg);
       color:var(--text);
       font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
-      letter-spacing:-0.0
+      letter-spacing:-0.01em;
+    }
+
+    .wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding: 22px var(--pad) 60px;
+    }
+
+    /* Top micro header */
+    .topbar{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:16px;
+      font-size:11px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:0.12em;
+      margin-bottom: 18px;
+    }
+    .topbar a{ color:var(--muted); text-decoration:none; border-bottom:1px solid transparent; }
+    .topbar a:hover{ border-bottom-color:var(--muted); }
+
+    .rule{ height:1px; background:var(--rule); margin: 18px 0 26px; }
+
+    /* Hero layout like reference */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items:start;
+      min-height: 420px;
+    }
+    @media (max-width: 860px){
+      .hero{ grid-template-columns:1fr; min-height:auto; }
+    }
+
+    .bigtype{
+      font-family: Anton, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 92px;
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      text-transform:uppercase;
+      margin:0;
+    }
+    @media (max-width: 860px){
+      .bigtype{ font-size: 64px; }
+    }
+
+    .meta{
+      display:grid;
+      gap: 14px;
+      padding-top: 8px;
+    }
+    .label{
+      font-size:11px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:0.14em;
+    }
+    .copy{
+      font-size: 13px;
+      line-height: 1.65;
+      color:#1a1a1a;
+      max-width: 42ch;
+    }
+    .copy strong{ font-weight:600; }
+
+    .miniGrid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .miniItem{
+      font-size:12px;
+      color:#111;
+      line-height:1.6;
+    }
+    .miniItem span{
+      display:block;
+      margin-top:6px;
+      color:var(--muted);
+      font-size:11px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+    }
+
+    /* Image strip */
+    .strip{
+      margin-top: 28px;
+      border-top: 1px solid var(--rule);
+      padding-top: 18px;
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 860px){
+      .strip{ grid-template-columns:1fr; }
+    }
+
+    .thumb{
+      border: 1px solid var(--rule);
+      background:#f6f6f6;
+      aspect-ratio: 16 / 10;
+      overflow:hidden;
+    }
+    .thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      filter: grayscale(100%);
+      transform: scale(1.02);
+    }
+    .thumbcap{
+      margin-top:8px;
+      font-size:11px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:0.12em;
+    }
+
+    /* Big contact block like reference */
+    .contactBlock{
+      margin-top: 34px;
+      border-top: 1px solid var(--rule);
+      padding-top: 26px;
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items:end;
+    }
+    @media (max-width: 860px){
+      .contactBlock{ grid-template-columns:1fr; }
+    }
+
+    .bigLinks{
+      font-family: Anton, Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: 78px;
+      line-height: 0.9;
+      text-transform:uppercase;
+      margin:0;
+    }
+    @media (max-width: 860px){
+      .bigLinks{ font-size: 56px; }
+    }
+
+    .linkRow{
+      display:flex;
+      gap: 14px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:flex-end;
+    }
+    .btn{
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:0.14em;
+      padding: 10px 12px;
+      border:1px solid var(--text);
+      background:transparent;
+      color:var(--text);
+      text-decoration:none;
+      transition: all .15s ease;
+    }
+    .btn:hover{
+      background:var(--text);
+      color:var(--bg);
+    }
+
+    footer{
+      margin-top: 26px;
+      padding-top: 16px;
+      border-top: 1px solid var(--rule);
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      font-size:11px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:0.12em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <div class="topbar">
+      <div>AMEST GROUP</div>
+      <div><a href="mailto:contacto@amestgroup.com">Reach out</a> · <span class="mono">Mexico</span></div>
+      <div class="mono">Retail Distribution</div>
+    </div>
+
+    <div class="rule"></div>
+
+    <section class="hero">
+      <div>
+        <h1 class="bigtype">
+          AMEST<br>
+          GROUP<br>
+          DISTRIBUTION
+        </h1>
+      </div>
+
+      <div class="meta">
+        <div>
+          <div class="label">About</div>
+          <div class="copy">
+            <strong>AMEST GROUP</strong> is an international distributor specializing in
+            global fragrance brands, cosmetics, fashion apparel, and accessories.
+            We supply <strong>major department stores in Mexico</strong> and key local-market retailers,
+            with reliable wholesale distribution and consistent availability.
+          </div>
+        </div>
+
+        <div class="miniGrid">
+          <div class="miniItem">
+            Fragrances
+            <span>Leading commercial brands</span>
+          </div>
+          <div class="miniItem">
+            Cosmetics
+            <span>Beauty & personal care</span>
+          </div>
+          <div class="miniItem">
+            Fashion apparel
+            <span>Retail-ready assortment</span>
+          </div>
+          <div class="miniItem">
+            Accessories
+            <span>High-turn categories</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="label">Notes</div>
+          <div class="copy">
+            Brand portfolio available upon request. Nationwide coverage.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="strip">
+      <!-- Replace these with your own images in /assets -->
+      <div>
+        <div class="thumb">
+          <img src="assets/01.jpg" alt="Product / retail image 01">
+        </div>
+        <div class="thumbcap">Retail partners</div>
+      </div>
+      <div>
+        <div class="thumb">
+          <img src="assets/02.jpg" alt="Product / retail image 02">
+        </div>
+        <div class="thumbcap">Distribution</div>
+      </div>
+      <div>
+        <div class="thumb">
+          <img src="assets/03.jpg" alt="Product / retail image 03">
+        </div>
+        <div class="thumbcap">Assortment</div>
+      </div>
+    </section>
+
+    <section class="contactBlock">
+      <div>
+        <div class="label">Contact</div>
+        <h2 class="bigLinks">EMAIL<br>WHATSAPP<br>INSTAGRAM</h2>
+      </div>
+
+      <div class="linkRow">
+        <!-- Replace with your real links -->
+        <a class="btn" href="mailto:contacto@amestgroup.com">Email</a>
+        <a class="btn" href="https://wa.me/521XXXXXXXXXX" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="https://instagram.com/tuusuario" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> AMEST GROUP</div>
+      <div>Wholesale · Retail-driven · Mexico</div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
