@@ -1,0 +1,147 @@
+index.html<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AMEST GROUP | Perfumería Internacional y Cosméticos Coreanos</title>
+  <meta name="description" content="Distribución de perfumería internacional con todas las marcas comerciales del mercado y cosméticos coreanos." />
+  <style>
+    :root{
+      --bg:#0f0f12;
+      --card:#16161c;
+      --text:#f5f5f7;
+      --muted:#b6b6c2;
+      --accent:#c7a7ff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto;
+      background: linear-gradient(180deg, #14141b 0%, var(--bg) 100%);
+      color:var(--text);
+    }
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      padding:40px 20px 60px;
+    }
+    header{margin-bottom:40px;}
+    h1{
+      font-size:36px;
+      margin:0;
+      letter-spacing:0.04em;
+    }
+    .subtitle{
+      color:var(--muted);
+      margin-top:8px;
+      font-size:16px;
+    }
+    .card{
+      background:rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:18px;
+      padding:24px;
+      margin-bottom:20px;
+    }
+    h2{
+      font-size:18px;
+      margin:0 0 12px;
+      letter-spacing:0.03em;
+    }
+    p{
+      margin:0 0 12px;
+      color:var(--muted);
+      line-height:1.6;
+    }
+    ul{
+      padding-left:18px;
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+    .buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:16px;
+    }
+    a.btn{
+      text-decoration:none;
+      padding:10px 16px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,0.15);
+      color:var(--text);
+      background:rgba(255,255,255,0.05);
+      transition:all .2s ease;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+    a.btn.primary{
+      background:rgba(199,167,255,0.18);
+      border-color:rgba(199,167,255,0.6);
+    }
+    a.btn:hover{
+      background:rgba(255,255,255,0.1);
+      transform:translateY(-1px);
+    }
+    footer{
+      margin-top:30px;
+      font-size:12px;
+      color:rgba(255,255,255,0.4);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>AMEST GROUP</h1>
+      <div class="subtitle">Perfumería internacional y cosméticos coreanos</div>
+    </header>
+
+    <section class="card">
+      <h2>Sobre nosotros</h2>
+      <p>
+        AMEST GROUP es una empresa especializada en la distribución de perfumería internacional y cosméticos coreanos.
+        Contamos con un portafolio que incluye <strong>todas las marcas comerciales líderes del mercado</strong>,
+        así como una selección curada de skincare K-beauty reconocida por su innovación y calidad.
+      </p>
+      <p>
+        Operamos con un enfoque profesional y confiable, atendiendo a clientes mayoristas y socios comerciales
+        a nivel nacional.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Qué ofrecemos</h2>
+      <ul>
+        <li>Perfumería internacional (marcas comerciales líderes)</li>
+        <li>Cosméticos y skincare coreanos</li>
+        <li>Distribución y venta al mayoreo</li>
+        <li>Abastecimiento continuo y asesoría de producto</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Contacto</h2>
+      <p>Distribución nacional · Atención personalizada para clientes comerciales</p>
+      <div class="buttons">
+        <a class="btn primary" href="mailto:contacto@amestgroup.com">✉️ Email</a>
+        <a class="btn" href="https://wa.me/521XXXXXXXXXX" target="_blank" rel="noopener">💬 WhatsApp</a>
+        <a class="btn" href="#" target="_blank" rel="noopener">📷 Instagram</a>
+      </div>
+      <p style="margin-top:12px; font-size:14px;">
+        <em>Portafolio de marcas disponible bajo solicitud.</em>
+      </p>
+    </section>
+
+    <footer>
+      © <span id="year"></span> AMEST GROUP
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
