@@ -4,265 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>AMEST GROUP | Fragrances, Cosmetics, Fashion Apparel & Accessories</title>
+  <title>AMEST GROUP — Distribution</title>
   <meta name="description" content="AMEST GROUP is an international distributor specializing in global fragrance brands, cosmetics, fashion apparel and accessories—supplying major department stores across Mexico and key local-market retailers." />
 
-  <!-- Premium, minimal typography -->
+  <!-- Fonts (condensed headline + clean body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      /* Premium minimal palette */
-      --bg: #07070a;            /* near-black */
-      --bg2:#0b0b12;            /* deep ink */
-      --card: rgba(255,255,255,0.05);
-      --stroke: rgba(255,255,255,0.10);
-
-      --text:#f5f4f7;
-      --muted: rgba(245,244,247,0.72);
-
-      --accent:#c7a7ff;         /* soft lilac */
-      --accent2:#9de7d7;        /* icy mint */
-      --shadow: rgba(0,0,0,0.55);
-
-      --radius: 22px;
+      --bg:#ffffff;
+      --text:#0a0a0a;
+      --muted:#6b6b6b;
+      --rule:#e9e9e9;
+      --max:1120px;
+      --pad:24px;
     }
 
     *{ box-sizing:border-box; }
-    html, body{ height:100%; }
+    html,body{ height:100%; }
     body{
       margin:0;
-      font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      background:var(--bg);
       color:var(--text);
-      background:
-        radial-gradient(900px 600px at 15% 0%, rgba(199,167,255,0.18), transparent 55%),
-        radial-gradient(900px 600px at 90% 10%, rgba(157,231,215,0.12), transparent 55%),
-        linear-gradient(180deg, var(--bg2), var(--bg));
-    }
-
-    .wrap{
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 44px 18px 70px;
-    }
-
-    header{
-      margin-bottom: 26px;
-    }
-
-    .brand{
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:14px;
-      flex-wrap:wrap;
-    }
-
-    h1{
-      margin:0;
-      font-family:"Playfair Display", serif;
-      font-weight:600;
-      letter-spacing:0.04em;
-      font-size: 42px;
-      line-height:1.05;
-    }
-
-    .subtitle{
-      margin:10px 0 0;
-      color:var(--muted);
-      font-size: 16px;
-      line-height:1.55;
-      max-width: 860px;
-    }
-
-    .pillrow{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-      margin-top:14px;
-    }
-
-    .pill{
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      padding:7px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.10);
-      color: rgba(245,244,247,0.78);
-      font-size: 12px;
-      letter-spacing: 0.02em;
-    }
-
-    .grid{
-      display:grid;
-      gap:16px;
-      grid-template-columns: 1fr;
-      margin-top: 18px;
-    }
-
-    @media (min-width: 900px){
-      .grid{
-        grid-template-columns: 1.25fr 0.75fr;
-      }
-    }
-
-    .card{
-      background: var(--card);
-      border: 1px solid var(--stroke);
-      border-radius: var(--radius);
-      padding: 22px;
-      box-shadow: 0 22px 70px var(--shadow);
-      backdrop-filter: blur(10px);
-    }
-
-    h2{
-      margin: 0 0 12px;
-      font-size: 16px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: rgba(245,244,247,0.92);
-    }
-
-    p{
-      margin: 0 0 12px;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 15px;
-    }
-
-    ul{
-      margin: 0;
-      padding-left: 18px;
-      color: var(--muted);
-      line-height: 1.8;
-      font-size: 15px;
-    }
-
-    .buttons{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top: 14px;
-    }
-
-    a.btn{
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding: 11px 15px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.04);
-      color: var(--text);
-      font-weight: 600;
-      letter-spacing: 0.01em;
-      transition: transform .10s ease, background .2s ease, border-color .2s ease;
-    }
-
-    a.btn:hover{
-      transform: translateY(-1px);
-      background: rgba(255,255,255,0.07);
-      border-color: rgba(255,255,255,0.22);
-    }
-
-    a.btn.primary{
-      border-color: rgba(199,167,255,0.55);
-      background: linear-gradient(135deg, rgba(199,167,255,0.20), rgba(157,231,215,0.10));
-    }
-
-    .small{
-      margin-top: 12px;
-      font-size: 13px;
-      color: rgba(245,244,247,0.60);
-    }
-
-    .divider{
-      height:1px;
-      background: rgba(255,255,255,0.08);
-      margin: 14px 0;
-    }
-
-    footer{
-      margin-top: 22px;
-      font-size: 12px;
-      color: rgba(245,244,247,0.45);
-    }
-
-    .mono{
-      font-variant-numeric: tabular-nums;
-    }
-
-    /* Optional: nicer selection */
-    ::selection{
-      background: rgba(199,167,255,0.35);
-    }
-  </style>
-</head>
-
-<body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div>
-          <h1>AMEST GROUP</h1>
-          <div class="subtitle">
-            International fragrance distribution, cosmetics, fashion apparel and accessories.
-            Retail-driven wholesale supply for department stores and local market partners across Mexico.
-          </div>
-          <div class="pillrow">
-            <span class="pill">Wholesale Distribution</span>
-            <span class="pill">Department Stores</span>
-            <span class="pill">Nationwide Coverage</span>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <div class="grid">
-      <section class="card">
-        <h2>About</h2>
-        <p>
-          AMEST GROUP is an international distributor specializing in global fragrance brands, cosmetics,
-          fashion apparel, and accessories. We offer a comprehensive portfolio of leading commercial brands,
-          serving a wide range of retail and commercial partners.
-        </p>
-        <p>
-          We currently supply some of the most important department stores in Mexico, as well as key local-market
-          retailers—providing reliable wholesale distribution, consistent availability, and professional product support.
-        </p>
-        <p>
-          With a strong focus on efficiency, trust, and long-term partnerships, AMEST GROUP operates as a strategic
-          distribution partner for retailers nationwide.
-        </p>
-
-        <div class="divider"></div>
-
-        <h2>What we offer</h2>
-        <ul>
-          <li>International fragrances (leading commercial brands)</li>
-          <li>Cosmetics and beauty products</li>
-          <li>Fashion apparel and accessories</li>
-          <li>Wholesale distribution</li>
-          <li>Nationwide supply and product advisory</li>
-        </ul>
-
-        <p class="small"><em>Brand portfolio available upon request.</em></p>
-      </section>
-
-      <aside class="card">
-        <h2>Contact</h2>
-        <p>
-          For commercial inquiries, partnerships, and wholesale distribution.
-        </p>
-
-        <div class="buttons">
-          <!-- Replace with your real email / WhatsApp / IG -->
-          <a class="btn primary" href="mailto:contacto@amestgroup.com">✉️ Email</a>
-          <a class="btn" href="https://wa.me/521XXXXXXXXXX" target="_blank" rel="noopener">💬 WhatsApp</a>
-          <a class="btn" href="#" target="_
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      letter-spacing:-0.0
